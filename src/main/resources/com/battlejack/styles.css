@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Luckiest Guy";
+    src: url("fonts/LuckiestGuy-Regular.ttf");
+}
+
+.title-text {
+    -fx-font-family: "Luckiest Guy", Arial, sans-serif;
+    -fx-font-size: 96px;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+}
+
+.main-menu {
+    -fx-background-color: linear-gradient(to bottom, #145214, #0A3D0A);
+}
+
+.menu-button {
+    -fx-font-family: "Luckiest Guy", Arial, sans-serif;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-background-color: #C1272D;
+    -fx-background-radius: 50px;
+    -fx-border-width: 0;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 200px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #E63946;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.score-label {
+    -fx-font-family: "Luckiest Guy", Arial, sans-serif;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+}

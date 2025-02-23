@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="main-menu" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.battlejack.BlackjackGameController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd400d7" height="244.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" width="530.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" stroke="BLACK" strokeType="INSIDE" width="171.0">
+         <fill>
+            <LinearGradient endX="0.995260663507109" endY="1.0" startX="0.995260663507109" startY="0.41232227488151657">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2758772075176239" blue="0.44736841320991516" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09210526198148727" green="0.09210526198148727" blue="0.09210526198148727" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="155.0" layoutY="644.0" stroke="BLACK" strokeType="INSIDE" width="1200.0">
+         <fill>
+            <LinearGradient endX="0.995260663507109" endY="1.0" startX="0.995260663507109" startY="0.41232227488151657">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2758772075176239" blue="0.44736841320991516" opacity="0.49000000953674316" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09210526198148727" green="0.09210526198148727" blue="0.09210526198148727" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+       <HBox fx:id="dealerHandBox" alignment="CENTER_LEFT" layoutX="179.0" prefHeight="200.0" prefWidth="1021.0" spacing="10" />
+       <HBox fx:id="playerHandBox" alignment="CENTER_LEFT" layoutX="179.0" layoutY="200.0" prefHeight="200.0" prefWidth="1021.0" spacing="10" />
+       <Text fx:id="moneyText" layoutX="233.0" layoutY="525.0" styleClass="score-label" />
+       <Text fx:id="gameStatus" layoutX="657.0" layoutY="525.0" styleClass="score-label" />
+       <Button fx:id="betButton" layoutX="14.0" layoutY="685.0" onAction="#handleBet" styleClass="menu-button" text="Bet $100" />
+       <Button fx:id="dealButton" layoutX="252.0" layoutY="685.0" onAction="#handleDeal" styleClass="menu-button" text="Deal" />
+       <Button fx:id="hitButton" layoutX="500.0" layoutY="685.0" onAction="#handleHit" styleClass="menu-button" text="Hit" />
+       <Button fx:id="standButton" layoutX="739.0" layoutY="685.0" onAction="#handleStand" styleClass="menu-button" text="Stand" />
+       <Text fx:id="dealerLabel" layoutX="14.0" layoutY="66.0" styleClass="score-label" text="Dealer" />
+       <Text fx:id="playerLabel" layoutX="17.0" layoutY="252.0" styleClass="score-label" text="Player" />
+       <Text fx:id="dealerScore" layoutX="72.0" layoutY="107.0" styleClass="score-label" />
+       <Text fx:id="playerScore" layoutX="73.0" layoutY="307.0" styleClass="score-label" />
+      <Line endX="1099.0" layoutX="100.0" layoutY="200.0" startX="-100.0" />
+      <Line endX="1086.0" layoutX="114.0" layoutY="400.0" startX="-114.0" />
+      <Text fx:id="dealerScore1" layoutX="47.0" layoutY="597.0" styleClass="score-label" text="Winnings: $" />
+      <Text fx:id="dealerScore11" layoutX="47.0" layoutY="461.0" styleClass="score-label" text="Goal: $" />
+      <Text fx:id="dealerScore111" layoutX="47.0" layoutY="529.0" styleClass="score-label" text="Balance: $" />
+      <Text fx:id="goal" layoutX="178.0" layoutY="461.0" styleClass="score-label" />
+      <Text fx:id="winnings" layoutX="252.0" layoutY="588.0" styleClass="score-label" />
+      <Button fx:id="doubleDown" layoutX="973.0" layoutY="685.0" onAction="#handleDouble" styleClass="menu-button" text="Double" />
+   </children>
+</AnchorPane>
