@@ -12,7 +12,6 @@ public class Game {
     private String moneyText;
     private int goal;
     private int winnings;
-    private int multiplier;
 
     public Game() {
         deck = new Deck(6);
@@ -23,11 +22,6 @@ public class Game {
         gameOver = false;
         winnerMessage = "";
         moneyText = Integer.toString(player.getMoney());
-        if(GameState.getMultiplier() > multiplier){
-            multiplier = GameState.getMultiplier();
-        } else {
-            multiplier = 1;
-        }
     }
 
     public void startNewHand() {
@@ -52,9 +46,9 @@ public class Game {
             winnerMessage = "Push! Both Player and Dealer have Blackjack.";
             gameOver = true;
         } else if (player.getScore() == 21 && player.getHand().size() == 2) {
-            GameState.addWinnings(player.getCurrentBet() * 2 * multiplier);
-            player.updateMoney(player.getCurrentBet() * 3 * multiplier);
-            updateWinnings(player.getCurrentBet() * 2 * multiplier);
+            GameState.addWinnings(player.getCurrentBet() * 2 * GameState.getMultiplier());
+            player.updateMoney(player.getCurrentBet() * 3 * GameState.getMultiplier());
+            updateWinnings(player.getCurrentBet() * 2 * GameState.getMultiplier());
             player.setCurrentBet(-player.getCurrentBet());
             moneyText = Integer.toString(player.getMoney());
             winnerMessage = "Player wins with a Blackjack!";
@@ -153,16 +147,16 @@ public class Game {
         int dealerScore = dealer.getScore();
 
         if (dealerScore > 21) {
-            player.updateMoney(player.getCurrentBet() * 2 * multiplier);
-            GameState.addWinnings(player.getCurrentBet() * multiplier);
-            updateWinnings(player.getCurrentBet() * multiplier);
+            player.updateMoney(player.getCurrentBet() * 2 * GameState.getMultiplier());
+            GameState.addWinnings(player.getCurrentBet() * GameState.getMultiplier());
+            updateWinnings(player.getCurrentBet() * GameState.getMultiplier());
             player.setCurrentBet(-player.getCurrentBet());
             moneyText = Integer.toString(player.getMoney());
             winnerMessage = "Dealer busts! Player wins!";
         } else if (playerScore > dealerScore) {
-            player.updateMoney(player.getCurrentBet() * 2 * multiplier);
-            GameState.addWinnings(player.getCurrentBet() * multiplier);
-            updateWinnings(player.getCurrentBet() * multiplier);
+            player.updateMoney(player.getCurrentBet() * 2 * GameState.getMultiplier());
+            GameState.addWinnings(player.getCurrentBet() * GameState.getMultiplier());
+            updateWinnings(player.getCurrentBet() * GameState.getMultiplier());
             player.setCurrentBet(-player.getCurrentBet());
             moneyText = Integer.toString(player.getMoney());
             winnerMessage = "Player wins!";

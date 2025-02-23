@@ -54,6 +54,7 @@ public class BlackjackGameController {
     @FXML
     private void handleHit() {
         dealGame();
+        SoundManager.playSlide();
         game.playerHit();
         updateUI(false);
         if (game.isGameOver() && game.playerLost()) {

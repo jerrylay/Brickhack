@@ -52,7 +52,7 @@
        <HBox fx:id="dealerHandBox" alignment="CENTER_LEFT" layoutX="179.0" prefHeight="200.0" prefWidth="1021.0" spacing="10" />
        <HBox fx:id="playerHandBox" alignment="CENTER_LEFT" layoutX="179.0" layoutY="200.0" prefHeight="200.0" prefWidth="1021.0" spacing="10" />
        <Text fx:id="moneyText" layoutX="233.0" layoutY="525.0" styleClass="score-label" />
-       <Text fx:id="gameStatus" layoutX="657.0" layoutY="525.0" styleClass="score-label" />
+       <Text fx:id="gameStatus" layoutX="600.0" layoutY="525.0" styleClass="score-label" />
        <Button fx:id="betButton" layoutX="14.0" layoutY="685.0" onAction="#handleBet" styleClass="menu-button" text="Bet $100" />
        <Button fx:id="dealButton" layoutX="252.0" layoutY="685.0" onAction="#handleDeal" styleClass="menu-button" text="Deal" />
        <Button fx:id="hitButton" layoutX="500.0" layoutY="685.0" onAction="#handleHit" styleClass="menu-button" text="Hit" />
